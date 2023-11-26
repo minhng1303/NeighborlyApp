@@ -1,18 +1,18 @@
-import logging.config
-import os
 from flask import Flask, Blueprint, request, jsonify, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
-import settings
 import requests
 import json
+import settings
 from feedgen.feed import FeedGenerator
 from flask import make_response
 from urllib.parse import urljoin
 from werkzeug.contrib.atom import AtomFeed
+from markupsafe import escape
+from urllib3.packages.six import moves 
+import urllib3
 
 app = Flask(__name__)
 Bootstrap(app)
-
 
 
 def get_abs_url(url):
