@@ -1,13 +1,13 @@
-{
-  "scriptFile": "__init__.py",
-  "bindings": [
-    {
-      "type": "eventGridTrigger",
-      "name": "event",
-      "direction": "in",
-	  "eventHubName": "testhub", 
-	  "connection": "Endpoint=sb://udacityneighborly.servicebus.windows.net/;SharedAccessKeyName=allpolicy;SharedAccessKey=LOxUOkN13xN038T1VoSsmaTt4s7vq/+VCzduS5/nH9A=;EntityPath=testhub"
-    }
-  ]
-}
+// {
+//   "scriptFile": "__init__.py",
+//   "bindings": [
+//     {
+//       "type": "eventGridTrigger",
+//       "name": "event",
+//       "direction": "in",
+// 	  "eventHubName": "minhnt47eventhub", 
+// 	  "connection": "sb://minhnt47eventhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=30rsnCB9S8oEv0yFhgwcBiDegAJTw/gKH+AEhLcz9Bg=;EntityPath=minhnt47eventhub"
+//     }
+//   ]
+// }
 

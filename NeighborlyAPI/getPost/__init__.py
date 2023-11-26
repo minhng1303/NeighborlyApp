@@ -3,6 +3,7 @@ import pymongo
 import json
 from bson.json_util import dumps
 from bson.objectid import ObjectId
+import os
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -10,9 +11,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     if id:
         try:
-            url = "localhost"  # TODO: Update with appropriate MongoDB connection information
+            url = os.environ["MyDbConnection"] # Change the Variable name, as applicable to you
             client = pymongo.MongoClient(url)
-            database = client['azure']
+            database = client['minhnt47-mongodb']
             collection = database['posts']
 
             query = {'_id': ObjectId(id)}
@@ -25,3 +26,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     else:
         return func.HttpResponse("Please pass an id parameter in the query string.", status_code=400)
+    
